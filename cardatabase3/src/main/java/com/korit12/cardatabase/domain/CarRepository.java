@@ -10,8 +10,6 @@ import java.util.List;
 @Tag(name = "Car API", description = "자동차 정보 CRUD 및 검색 API")
 @RepositoryRestResource(path = "vehicles")
 public interface CarRepository extends JpaRepository<Car, Long> {
-    // 브랜드로 자동차 검색
     List<Car> findByBrand(@Param("brand") String brand);
-    // 색상으로 자동차 검색
     List<Car> findByColor(@Param("color") String color);
 }
